@@ -1,0 +1,93 @@
+\documentclass[a4paper,oneside,12pt]{report}
+\usepackage{styles/fbe_tez}
+\usepackage[utf8x]{inputenc} % To use Unicode (e.g. Turkish) characters
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[bottom]{footmisc}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{longtable}
+\graphicspath{{figures/}}
+\usepackage{multirow}
+\usepackage{subfigure}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{comment} % for multiline comment
+\usepackage{tabularx} % better table formatting
+\usepackage{array} % for column type customization
+
+\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+
+% COVER PAGE
+\title{Inclusive, Participatory Smart Environments}
+\author{Emir Hüseyin Karabaş \\ Advisor: Suzan Üsküdarlı}
+
+\begin{document}
+
+\pagenumbering{roman}
+\maketitle{}
+\tableofcontents
+
+\chapter{Plan}
+
+This document presents the official week-by-week work plan for the term paper "Inclusive, Participatory Smart Environments." The plan prioritizes the analysis of academic works with available code implementations to ground the theoretical survey in practical software engineering contexts.
+
+\vspace{1cm}
+
+\begin{table}[h!]
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{|c|c|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+\hline 
+\bf{Week} & \bf{Date Range} & \bf{Main Task} & \bf{Deliverable} \\
+\hline
+1 & Oct 18-24 & Research Setup & \bf{Work Plan Submission (Oct 24)} \\
+\hline
+2 & Oct 25-31 & Foundational Papers & 2 Wiki pages (Sanders, Wilson) \\
+\hline
+3 & Nov 1-7 & Technical Infrastructure & 2 Wiki pages (Dave, Liciotti) \\
+\hline
+4 & Nov 8-14 & Strategic Direction & 2 Wiki pages + Glossary \\
+\hline
+5 & Nov 15-21 & Progress Report & \bf{Progress Report (Nov 21)} \\
+\hline
+6 & Nov 22-28 & Case Studies & 3 Wiki pages + Comparison Table \\
+\hline
+7 & Nov 29-Dec 5 & Framework Design & Simple Framework Proposal \\
+\hline
+8 & Dec 6-12 & Report Drafting & Draft Report Sections \\
+\hline
+9 & Dec 13-19 & Report Completion & Complete Draft \\
+\hline
+10 & Dec 20-28 & Final Submission & \bf{Final Report (Dec 28)} \\
+\hline
+\end{tabularx}
+\end{center}
+\caption{Week-by-week work plan for SWE 577 Term Paper}
+\label{tab:workplan}
+\end{table}
+
+\begin{comment}
+\section{Key Milestones}
+
+The work plan includes three major milestones:
+
+\begin{itemize}
+\item \textbf{Work Plan Submission:} October 24, 2025
+\item \textbf{Progress Report:} November 21, 2025
+\item \textbf{Final Report:} December 28, 2025
+\end{itemize}
+
+\section{Approach}
+
+The research will focus on academic works that provide both theoretical frameworks and practical code implementations. This approach ensures that the theoretical survey is grounded in practical software engineering contexts, allowing for hands-on analysis and deeper understanding of inclusive and participatory design principles in smart environments.
+\end{comment}
+
+\bibliographystyle{styles/fbe_tez_v11}
+% \bibliography{references}
+
+\end{document}

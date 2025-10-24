@@ -16,7 +16,8 @@ This project's progress and documentation are managed entirely through this repo
 
 - **[Wiki](../../wiki)**: Comprehensive research documentation, literature analysis, and progress tracking
 - **[Issues](../../issues)**: Task management and milestone tracking
-- **[Source Code Samples](/code)**: Includes illustrative code snippets or analyses related to the reviewed papers (if applicable).
+- **[Reports](reports/)**: Versioned formal submissions (Work Plan, Progress Report, Final Report)
+- **[Source Code Samples](code/)**: Code samples and analyses organized by paper, extracted from reviewed academic repositories
 
 ## 3. Key Research Areas
 
