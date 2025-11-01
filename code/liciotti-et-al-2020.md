@@ -16,7 +16,7 @@ First of all we won't be able to just feed raw sensor logs to a neural network. 
 So how do they do it? The clever bit is using the "begin" and "end" markers in the logs to figure out which sensor events belong to a specific activity. This lets them gather all the little events and group them into one coherent story.
 
 ```python
-# Found in: 08_cloned_repos/week3/liciotti_etal_2020/deep-casas/data.py
+# Found in: /deep-casas/data.py
 
 def load_dataset(filename):
     # ...
@@ -57,7 +57,7 @@ This is where the learning happens. `models.py` uses Keras to build the LSTM net
 The model itself is surprisingly straightforward. But there's one argument in the `Embedding` layer that's super important for us: `mask_zero=True`. What does it do? It tells the model to just ignore all the zero-padding we have to add to make the sequences the same length. This is a big deal, because in real life, activities don't all take the same amount of time.
 
 ```python
-# Found in: 08_cloned_repos/week3/liciotti_etal_2020/deep-casas/models.py
+# Found in: /deep-casas/models.py
 
 from keras.layers import Dense, LSTM
 from keras.layers.embeddings import Embedding
