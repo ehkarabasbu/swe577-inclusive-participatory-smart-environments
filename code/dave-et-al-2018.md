@@ -19,7 +19,7 @@ A question like "how does the O-MI node not crash when a bunch of requests come 
 This `receive` block is the core of it. Just a clean, simple pattern match. For us, this whole actor model is a significant find. It’s a ready-made recipe for a backend that can scale up and handle lots of people interacting with it at once without falling over.
 
 ```scala
-// Found in: 08_cloned_repos/week3/dave_etal_2018/O-MI/O-MI-Node/src/main/scala/responses/RequestHandler.scala
+// Found in: /O-MI/O-MI-Node/src/main/scala/responses/RequestHandler.scala
 
 def receive: PartialFunction[Any, Unit] = {
   case read: ReadRequest => respond(handleReadRequest(read))
