@@ -85,7 +85,7 @@ We can think of `train.py` here as the conductor of an orchestra. It loads the d
 The script uses a `StratifiedKFold` cross-validation strategy. It's a reliable way to test a model. It makes sure the results you're seeing are real and not just a lucky coincidence from one particular train-test split.
 
 ```python
-# Found in: 08_cloned_repos/week3/liciotti_etal_2020/deep-casas/train.py
+# Found in: /deep-casas/train.py
 
 if __name__ == '__main__':
     # ...
