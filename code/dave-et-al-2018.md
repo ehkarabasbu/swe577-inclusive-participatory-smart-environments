@@ -45,7 +45,7 @@ What's really good is the `splitAndHandle` function that gets called by these ha
 The `ScalaInternalAgent` trait is the starter kit for making these agents. It gives them the tools to talk to the database and everything else. When a user clicks a button in the UI and sends a `WriteRequest`, this is where it ends up.
 
 ```scala
-// Found in: 08_cloned_repos/week3/dave_etal_2018/O-MI/O-MI-Node/src/main/scala/agentSystem/InternalAgent.scala
+// Found in: /O-MI/O-MI-Node/src/main/scala/agentSystem/InternalAgent.scala
 
 case class ResponsibleWrite(promise: Promise[ResponseRequest], write: WriteRequest)
 
@@ -81,7 +81,7 @@ The whole reason this system works without creating a chaos-like situation is be
 Examine `ReadRequest` and `WriteRequest` here. They're useful little data packets. They've got the data payload (`odf`), a callback address, a time-to-live... everything someone need.
 
 ```scala
-// Found in: 08_cloned_repos/week3/dave_etal_2018/O-MI/O-MI-Node/src/main/scala/types/Omi/OmiTypes.scala
+// Found in: /O-MI/O-MI-Node/src/main/scala/types/Omi/OmiTypes.scala
 
 case class ReadRequest(
   odf: ODF,
