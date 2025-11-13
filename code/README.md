@@ -15,6 +15,7 @@ _Please note: This is an evolving code directory. New files will be added as the
 |-------|-----------|---------------------|
 | Dave et al. (2018) | [dave-et-al-2018/](dave-et-al-2018.md/) | [Frontend](https://github.com/AaltoAsia/Otaniemi3D) , [Backend](https://github.com/AaltoAsia/O-MI) |
 | Liciotti et al. (2020) | [liciotti-et-al-2020/](liciotti-et-al-2020.md/) | [Link](https://github.com/danielelic/deep-casas) |
+| Mendonca & Ferreira (2024) | [mendonca-ferreira-2024/](mendonca-ferreira-2024.md/) | [Link](https://github.com/buildingSMART/IDS) |
 
 ## Usage
 
