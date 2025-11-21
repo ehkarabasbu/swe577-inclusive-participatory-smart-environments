@@ -1,0 +1,158 @@
+\documentclass[a4paper,oneside,12pt]{report}
+\usepackage{styles/fbe_tez}
+\usepackage[utf8x]{inputenc}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[bottom]{footmisc}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{longtable}
+\graphicspath{{figures/}}
+\usepackage{multirow}
+\usepackage{subfigure}
+\usepackage{comment} % for multiline comment
+\usepackage{tabularx} % better table formatting
+\usepackage{array} % for column type customization
+\usepackage{float} % for [H] placement on figures - not to wrap figures to the next page for the sake of optimized text flow. with this structure we are using in, figures are being replaced on the exact place as they are in the text flow.
+
+% ===============================
+% COVER & CONTENTS
+% ===============================
+
+\title{Inclusive, Participatory Smart Environments}
+\author{Emir Hüseyin Karabaş \\ Advisor: Asst. Prof. Dr. Suzan Üsküdarlı}
+
+\begin{document}
+
+\pagenumbering{roman}
+\maketitle{}
+\tableofcontents
+
+% ===============================
+% CHAPTER 1: PLAN
+% ===============================
+\chapter{Plan}
+
+This table presents the official week-by-week work plan for the term paper "Inclusive, Participatory Smart Environments." As of Week 5, we have completed the foundational literature review, technical infrastructure analysis, and strategic direction assessment. The remaining weeks will focus on synthesizing these findings into a cohesive framework.
+
+\begin{table}[H]
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{|c|c|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+\hline 
+\bf{Week} & \bf{Date Range} & \bf{Main Task} & \bf{Status} \\
+\hline
+1 & Oct 18-24 & Research Setup & \bf{Completed} \\
+\hline
+2 & Oct 25-31 & Foundational Papers (Sanders, Wilson) & \bf{Completed} \\
+\hline
+3 & Nov 1-7 & Technical Infrastructure (Dave, Liciotti) & \bf{Completed} \\
+\hline
+4 & Nov 8-14 & Strategic Direction (Mendonça, Zhou) & \bf{Completed} \\
+\hline
+5 & Nov 15-21 & Progress Report & \bf{Submitted (Nov 21)} \\
+\hline
+6 & Nov 22-28 & Technical Case Studies & Planned \\
+\hline
+7 & Nov 29-Dec 5 & Framework Design & Planned \\
+\hline
+8 & Dec 6-12 & Report Drafting & Planned \\
+\hline
+9 & Dec 13-19 & Report Completion & Planned \\
+\hline
+10 & Dec 20-28 & Final Submission & \bf{Due Dec 28} \\
+\hline
+\end{tabularx}
+\end{center}
+\caption{Week-by-week work plan for SWE 577 Term Paper}
+\label{tab:workplan}
+\end{table}
+
+\vspace{1em}
+\noindent \textbf{A Note on Final Report Scope:} In adherence to final report constraints, "Work Plan" section as a whole and certain figures in the "Problem Definition \& Literature Review" section will be excluded from the final report submission. Additionally, the 'Emerging Directions' chapter is specific to this progress report; in the final report, it will be replaced by new sections detailing the new findings and inferences derived from the subsequent phases of our research.
+
+% ===============================
+% CHAPTER 2: INTRODUCTION
+% ===============================
+\chapter{Introduction}
+
+Smart environments promise to revolutionize how we live, particularly for vulnerable populations like the elderly or people with disabilities. However, a recurring theme in our initial research is that these promises often fail to materialize in the real world. The technology exists (we have sensors, BIM models, and AI—but the implementation often feels disconnected from the actual needs of users) .
+
+Our research aims to bridge this gap. We are investigating how "Inclusive, Participatory Smart Environments" can be built not just by deploying more technology, but by fundamentally changing how that technology is designed. We are exploring the intersection of Software Engineering and Architecture, looking for a way to move from "smart homes" that merely observe users to "participatory environments" that empower them.
+
+This progress report summarizes our findings from the first five weeks of research. We have analyzed six core papers that cover the philosophical, technical, and strategic dimensions of this problem. What we found was a striking disconnect between the disciplines (a gap we believe can be bridged through open standards and a multi-scale approach) .
+
+% ===============================
+% CHAPTER 3: PROBLEM DEFINITION & LITERATURE REVIEW
+% ===============================
+\chapter{Problem Definition \& Literature Review}
+
+Our review of the literature revealed a fragmented landscape. While individual solutions exist for specific problems (e.g., activity recognition or BIM integration), there is a lack of a unified approach that connects these technical capabilities with the social necessity of user participation.
+
+\section{The Philosophical Disconnect}
+The foundation of our research lies in the contrast between two pioneer works. Sanders \& Stappers (2008) provided us with the ideal: \textbf{co-creation}. They argue that users should not be treated as passive subjects but as active partners in the design process \cite{sanders2008}. This "participatory design" approach is crucial for creating environments that actually work for people.
+
+However, Wilson et al. (2014) paint a completely different picture of reality. In their systematic review of smart home research, they identified a massive "technology-push" bias. Engineers are building systems because they \textit{can}, not because users \textit{need} them. Wilson's framework (Figure \ref{fig:sanders}) highlights how research is siloed: the technical fields rarely talk to the social ones. This leads to "undomesticated" technology that fails to fit into the messy reality of everyday life \cite{wilson2015}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{sanders-participatory-framework.png}
+\caption{Sanders' landscape of participatory design \cite{sanders2008}. Our research aims to move smart environment design from the "Expert Mindset" (left) to the "Participatory Mindset" (right).}
+\label{fig:sanders}
+\end{figure}
+
+\section{The Technical Foundation}
+If Wilson identifies the problem, do we have the technical tools to solve it? Our review of Dave et al. (2018) and Liciotti et al. (2020) suggests that we do, but they need to be integrated.
+
+Dave et al. demonstrate that it is possible to integrate Building Information Models (BIM) with IoT sensors using open standards like O-MI/O-DF \cite{dave2018}. This gives the system a spatial context (it knows \textit{where} events are happening) . 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{dave-architecture.png}
+\caption{Dave's BIM-IoT integration through open standards \cite{dave2018} proves feasibility, but real systems often bypass these approaches in favor of proprietary silos.}
+\label{fig:dave}
+\end{figure}
+
+Liciotti et al. take this a step further with Deep Learning (LSTMs) to recognize human activities \cite{liciotti2020}. This gives the system behavioral context (it knows \textit{what} is happening (e.g., "cooking" vs. "sleeping") ) .
+
+Together, these papers provide the "hardware" for a smart environment. But as we noted in our analysis, they remain largely passive. A system that knows you are cooking would be smart; but a system that asks how you want the kitchen lighting adjusted will be participatory.
+
+\section{The Strategic Gap}
+The final piece of our initial review looked at governance and compliance. Mendonça \& Ferreira (2024) showed us that accessibility rules can be automated using the Information Delivery Specification (IDS) \cite{mendonca2024}. This is a powerful tool for ensuring inclusivity, but it can raise a question here: who defines the rules?
+
+Zhou et al. (2024) answer this with the "Quadruple Helix Model" (Figure \ref{fig:zhou}), arguing that smart cities must involve government, industry, academia, and citizens (we believe they as most crucial stakeholder) \cite{zhou2024}. This aligns perfectly with Sanders' philosophy but scales it up to the city level.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{zhou-quadruple-helix.png}
+\caption{The Quadruple Helix Model proposed by Zhou et al. \cite{zhou2024}. It adds "Civil Society" (citizens) as a fourth equal pillar to the traditional innovation model, ensuring that smart city development is inclusive by design.}
+\label{fig:zhou}
+\end{figure}
+
+This model provides the strategic "who" for our research. If Sanders gives us the philosophy (Co-creation) and Dave/Liciotti give us the technology (BIM/IoT/AI), Zhou gives us the governance structure to ensure these tools are actually used to empower people with disabilities.
+
+\chapter{Emerging Directions}
+
+\section{Towards a Synthesis}
+As we move into the next phase of our research, we are beginning to formulate some initial questions. Rather than a definitive solution, we see a potential opportunity to explore how these different elements might complement each other.
+
+The literature suggests that the "silos" Wilson warned about might potentially be addressed by the open standards Dave and Mendonça utilize. We plan to investigate whether a multi-scale approach (linking the \textbf{Building} (Dave/Liciotti), the \textbf{Urban} (smart city contexts), and the \textbf{National} (infrastructure) ) could facilitate a more integrated flow of participation.
+
+\section{Future Work}
+In the coming weeks, we plan to:
+\begin{enumerate}
+    \item \textbf{Investigate Technical Case Studies:} We will look for real-world examples that attempt this multi-scale integration (in Week 6).
+    \item \textbf{Drafting a Conceptual Framework:} We aim to sketch a preliminary framework that uses standards like IFC and O-MI not just for data exchange, but potentially as a "connective tissue" for user participation among scales (in Week 7).
+    \item \textbf{Exploring Theoretical Scenarios:} We hope to discuss this concept against theoretical scenarios (e.g., "How might a wheelchair user's preference flow from a home device to city planning?") to see if it offers a meaningful perspective on the "technology-push" problem. This will be a conceptual exploration, not a software implementation.
+\end{enumerate}
+
+Our tentative goal is to imagine a model where a user's preference in their home might inform urban planning, and where national accessibility policies could be automatically checked in a building's design (in other words, exploring the idea of an inclusive loop) .
+
+% ===============================
+% REFERENCES
+% ===============================
+\bibliographystyle{styles/fbe_tez_v11}
+\bibliography{references}
+
+\end{document}

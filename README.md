@@ -33,7 +33,7 @@ This research's progress and documentation are managed entirely through this rep
 | Milestone | Deadline | Status |
 | -------------------------- | ----------------- | ----------- |
 | Work Plan Submission | October 24, 2025 | `Completed` |
-| Progress Report Submission | November 21, 2025 | `Pending` |
+| Progress Report Submission | November 21, 2025 | `Completed` |
 | Final Report Submission | December 28, 2025 | `Pending` |
 
 ## Resources
