@@ -41,6 +41,7 @@ This research's progress and documentation are managed entirely through this rep
 - [Detailed Work Plan](../../wiki/Roadmap)
 - [Related Work](../../wiki/Related-Work)
 - [Key Concepts](../../wiki/Key-Concepts)
+- [Framework Proposal](../../wiki/Framework-Proposal)
 
 ---
 
