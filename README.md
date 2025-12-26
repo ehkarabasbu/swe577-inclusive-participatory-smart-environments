@@ -34,7 +34,7 @@ This research's progress and documentation are managed entirely through this rep
 | -------------------------- | ----------------- | ----------- |
 | Work Plan Submission | October 24, 2025 | `Completed` |
 | Progress Report Submission | November 21, 2025 | `Completed` |
-| Final Report Submission | December 28, 2025 | `Pending` |
+| Final Report Submission | December 28, 2025 | `Completed` |
 
 ## Resources
 
